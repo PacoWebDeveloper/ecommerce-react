@@ -8,7 +8,7 @@ import SimilarProducts from '../components/productId/SimilarProducts'
 const ProductId = () => {
 
   const [product, setProduct] = useState()
-  const [categories, setCategories] = useState([])
+  const [categories, setCategories] = useState()
 
   const { id } = useParams()
 

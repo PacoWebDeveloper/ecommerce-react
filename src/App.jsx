@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import './App.css'
 import ProtectedRoutes from './components/app/ProtectedRoutes'
+import Header from './layout/Header'
 import Cart from './pages/Cart'
 import Home from './pages/Home'
 import Login from './pages/Login'
@@ -11,6 +12,7 @@ function App() {
 
   return (
     <div className="App">
+      <Header />
       <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/login' element={<Login />}/>
