@@ -26,7 +26,7 @@ const Login = () => {
           <section>
             <i className='bx bx-user-circle'></i>
             <h3>{`${user.firstName} ${user.lastName}`}</h3>
-            <button onClick={handleClickLogout}>Loguot</button>
+            <button onClick={handleClickLogout}>Logout</button>
           </section>
         ) : (
           <form onSubmit={handleSubmit(submit)}>
@@ -42,7 +42,7 @@ const Login = () => {
             </div>
             <div>
               <label htmlFor="">Password</label>
-              <input type="password" {...register/"password"} />
+              <input type="password" {...register("password")} />
             </div>
             <button>Login</button>
             <p>Don't have an acconut? <span>Sing up</span></p>
