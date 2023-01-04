@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import ProductInfo from '../components/productId/ProductInfo'
 import SimilarProducts from '../components/productId/SimilarProducts'
+import './styles/ProductId.css'
 
 const ProductId = () => {
 
@@ -27,7 +28,7 @@ const ProductId = () => {
   },[id])
 
   return (
-    <main>
+    <main className='productId'>
       <ProductInfo product={product}/>
       <SimilarProducts product={product} categories={categories} />
     </main>

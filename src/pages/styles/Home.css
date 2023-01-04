@@ -1,0 +1,31 @@
+.home {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+.home-form {
+    width: max-content;
+    margin: 20px auto;
+    border: 1px solid var(--color-gray);
+}
+.home-form-input {
+    color: var(--color-gray);
+    padding: 10px 40px 10px 10px;
+    border: none;
+    font-size: 14px;
+}
+.home-form-btn {
+    font-size: 14px;
+    padding: 10px;
+    border: none;
+    color: #fff;
+    background-color: var(--color-red);
+    cursor: pointer;
+}
+.home-containerProducts {
+    display: grid;
+    grid-template-columns: repeat(autp-fill, minmax(270px, 1fr));
+    justify-content: center;
+    grid-template-rows: auto;
+    gap: 40px;
+    margin: 0 20px 20px 20px;
+}

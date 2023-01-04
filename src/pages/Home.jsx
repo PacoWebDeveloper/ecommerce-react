@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import Categories from '../components/home/Categories'
 import ProductCard from '../components/home/ProductCard'
 import { getAllProducts } from '../store/slices/products.slice'
+import './styles/Home.css'
 
 const Home = () => {
 
@@ -35,15 +36,15 @@ const Home = () => {
   }, [nameProduct, category])
 
   return (
-    <main>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <input type="text" id='nameProduct' placeholder="What are you looking for?" />
-          <button><i className='bx bx-search-alt-2' ></i></button>
+    <main className='home'>
+      <form className='home-form' onSubmit={handleSubmit}>
+        <div className='home-form-div'>
+          <input className='home-form-input' type="text" id='nameProduct' placeholder="What are you looking for?" />
+          <button className='home-form-btn'><i className='bx bx-search-alt-2' ></i></button>
         </div>
       </form>
       <Categories setCategory={setCategory}/>
-      <section>
+      <section className='home-containerProducts'>
         {
           filterProducts.map(product => <ProductCard key={product.id} product={product} />)
         }

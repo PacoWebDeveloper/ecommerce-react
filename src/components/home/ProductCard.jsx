@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import './styles/ProductCard.css'
 
 const ProductCard = ({product}) => {
 
@@ -13,15 +14,16 @@ const ProductCard = ({product}) => {
     e.stopPropagation()
   }
   return (
-    <article onClick={handleClickProduct}>
-        <header>
+    <article className='productCard' onClick={handleClickProduct}>
+        <header className='productCard-header'>
             <img src={product.productImgs[0]} alt={product.title} />
         </header>
-        <div>
-            <h3>{product.title}</h3>
-            <h4>Price</h4>
-            <span>{product.price}</span>
-            <button onClick={handleClickAddCart}>
+        <hr />
+        <div className='productCard-body'>
+            <h3 className='productCard-title'>{product.title}</h3>
+            <h4 className='productCard-title-price'>Price</h4>
+            <span className='productCard-price'>$ {product.price}</span>
+            <button className='productCard-btn' onClick={handleClickAddCart}>
               <i className='bx bx-cart'></i>
             </button>
         </div>
