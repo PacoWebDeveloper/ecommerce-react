@@ -2,6 +2,7 @@ import axios from 'axios'
 import React from 'react'
 import { useEffect, useState } from 'react'
 import ProductCard from '../home/ProductCard'
+import './styles/SimilarProducts.css'
 
 const SimilarProducts = ({product, categories}) => {
 
@@ -21,7 +22,7 @@ const SimilarProducts = ({product, categories}) => {
         }
     }, [categories, product])
   return (
-    <section>
+    <section className='similarProducts'>
         {
             productsByCategory.map(productByCategory => <ProductCard product={productByCategory} key={productByCategory.id} />)
         }

@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import CartProduct from '../components/cart/CartProduct'
 import { getAllCartProducts } from '../store/slices/cart.slice'
+import './styles/Cart.css'
 
 const Cart = () => {
 
@@ -14,8 +15,8 @@ const Cart = () => {
     dispatch(getAllCartProducts())
   }, [])
   return (
-    <main>
-      <section>
+    <main className='cart'>
+      <section className='cart-list'>
         {
           cart.map(cartProduct => <CartProduct cartProduct={cartProduct} key={cartProduct.id} />)
         }
