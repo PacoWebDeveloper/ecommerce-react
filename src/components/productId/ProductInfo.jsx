@@ -29,26 +29,31 @@ const ProductInfo = ({product}) => {
 
   return (
     <article className='productInfo'>
-        <h2 className='productInfo-title'>{product?.title}</h2>
-        <p className='productInfo-description'>{product?.description}</p>
-        <footer className='productInfo-footer'>
-            <div className='productInfo-container-price'>
-                <h3 className='productInfo-price-title'>Price</h3>
-                <span className='productInfo-price'>$ {product?.price}</span>
-            </div>
-            <div className='productInfo-container-quantity'>
-                <h3 className='productInfo-quantity-title'>Quantity</h3>
-                <div className='productInfo-container-counter'>
-                    <div className='productInfo-minus' onClick={minus}>-</div>
-                    <div className='productInfo-counter'>{quantity}</div>
-                    <div className='productInfo-plus' onClick={plus}>+</div>
+        <div className='productInfo-img'>
+            <img src={product?.productImgs[0]} alt="" />
+        </div>
+        <div className='productInfo-info'>
+            <h2 className='productInfo-title'>{product?.title}</h2>
+            <p className='productInfo-description'>{product?.description}</p>
+            <footer className='productInfo-footer'>
+                <div className='productInfo-container-price'>
+                    <h3 className='productInfo-price-title'>Price</h3>
+                    <span className='productInfo-price'>$ {product?.price}</span>
                 </div>
-            </div>
-            <button className='productInfo-btn' onClick={handleAddProduct}>
-                Add to cart 
-                <i className='bx bx-cart'></i>
-            </button>
-        </footer>
+                <div className='productInfo-container-quantity'>
+                    <h3 className='productInfo-quantity-title'>Quantity</h3>
+                    <div className='productInfo-container-counter'>
+                        <div className='productInfo-minus' onClick={minus}>-</div>
+                        <div className='productInfo-counter'>{quantity}</div>
+                        <div className='productInfo-plus' onClick={plus}>+</div>
+                    </div>
+                </div>
+                <button className='productInfo-btn' onClick={handleAddProduct}>
+                    Add to cart 
+                    <i className='bx bx-cart'></i>
+                </button>
+            </footer>
+        </div>
     </article>
   )
 }

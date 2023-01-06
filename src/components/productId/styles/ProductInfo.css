@@ -2,9 +2,22 @@
     font-size: 18px;
     padding: 10px;
 }
-/* .productInfo-title {
-    margin-bottom: 20px;
-} */
+.productInfo-img img {
+    max-height: 400px;
+    max-width: 400px;
+    object-fit: contain;
+}
+@media (min-width: 700px) {
+    .productInfo {
+        display: flex;
+    }
+    .productInfo-img {
+        width: 50%;
+    }
+    .productInfo-info {
+        width: 50%;
+    }
+}
 .productInfo-description {
     margin: 20px 5px;
 }

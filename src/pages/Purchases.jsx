@@ -3,6 +3,8 @@ import { useEffect } from 'react'
 import { useState } from 'react'
 import axios from 'axios'
 import { getConfig } from '../utils/configAxios'
+import PurchaseCard from '../components/purchases/purchaseCard'
+import './styles/Purchases.css'
 
 const Purchases = () => {
 
@@ -16,7 +18,14 @@ const Purchases = () => {
   }, [])
 
   return (
-    <div>Purchases</div>
+    <main className='purchases'>
+      <h2>My purchases</h2>
+      <section className='purchases-list'>
+        {
+          purchases.map(purchase => <PurchaseCard key={purchase.id} purchase={purchase} />)
+        }
+      </section>
+    </main>
   )
 }
 

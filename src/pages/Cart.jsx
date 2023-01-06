@@ -27,6 +27,7 @@ const Cart = () => {
   }, [])
   return (
     <main className='cart'>
+      <h2>My cart</h2>
       <section className='cart-list'>
         {
           cart.map(cartProduct => <CartProduct cartProduct={cartProduct} key={cartProduct.id} />)
@@ -37,9 +38,13 @@ const Cart = () => {
           )
         }
       </section>
-      <div className='cart-btn-container'>
-        <button className='cart-btn' onClick={handleBuyCart}>Buy cart</button>
-      </div>
+      {
+        cart.length != 0 && (
+          <div className='cart-btn-container'>
+            <button className='cart-btn' onClick={handleBuyCart}>Buy cart</button>
+          </div>
+        )
+      }
     </main>
   )
 }

@@ -25,7 +25,8 @@ const ProductCard = ({product}) => {
   return (
     <article className='productCard' onClick={handleClickProduct}>
         <header className='productCard-header'>
-            <img src={product.productImgs[0]} alt={product.title} />
+            <img className='productCard-header-img1' src={product.productImgs[0]} alt={product.title} />
+            <img className='productCard-header-img2' src={product.productImgs[2]} alt={product.title} />
         </header>
         <hr />
         <div className='productCard-body'>

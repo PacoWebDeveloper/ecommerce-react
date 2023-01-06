@@ -15,12 +15,29 @@
 }
 .productCard-header {
     height: 200px;
+    position: relative;
 }
 .productCard-header img {
     height: 100%;
     width: 100%;
     display: block;
     object-fit: contain;
+}
+.productCard-header-img1 {
+    transition: opacity 800ms ease;
+}
+.productCard-header-img2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 800ms ease;
+}
+.productCard-header:hover .productCard-header-img1 {
+    opacity: 0;
+}
+.productCard-header:hover .productCard-header-img2 {
+    opacity: 1;
 }
 .productCard-title-price {
     color: var(--color-gray);
