@@ -16,6 +16,7 @@
     color: var(--color-red);
     flex: 1 1;
     margin-left: 10px;
+    text-decoration: none;
 }
 .header-navbar {
     display: flex;

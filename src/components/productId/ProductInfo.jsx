@@ -1,9 +1,13 @@
 import React from 'react'
 import { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { addProductCart } from '../../store/slices/cart.slice'
 import './styles/ProductInfo.css'
 
 const ProductInfo = ({product}) => {
     const [quantity, setQuantity] = useState(1)
+
+    const dispatch = useDispatch()
 
     const minus = () => {
         const newValue = quantity - 1
@@ -13,6 +17,14 @@ const ProductInfo = ({product}) => {
 
     const plus = () => {
         setQuantity(quantity + 1)
+    }
+
+    const handleAddProduct = () => {
+        const data = {
+            id: product.id,
+            quantity: quantity
+          }
+          dispatch(addProductCart(data))
     }
 
   return (
@@ -32,7 +44,7 @@ const ProductInfo = ({product}) => {
                     <div className='productInfo-plus' onClick={plus}>+</div>
                 </div>
             </div>
-            <button className='productInfo-btn'>
+            <button className='productInfo-btn' onClick={handleAddProduct}>
                 Add to cart 
                 <i className='bx bx-cart'></i>
             </button>
