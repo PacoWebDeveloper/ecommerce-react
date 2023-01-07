@@ -1,0 +1,30 @@
+.categories-filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    height: 50px;
+}
+.categoriesFilter-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    height: inherit;
+    width: 100%;
+}
+.categoriesFilter-list li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--color-gray);
+    height: inherit;
+    width: calc(400px / 4);
+    font-size: 12px;
+    padding: 0 3px;
+    cursor: pointer;
+    transition: background-color 500ms ease;
+}
+.categoriesFilter-list li:hover {
+    background-color: #ccc;
+}

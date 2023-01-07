@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header className='header'>
       <NavLink className="header-pageName" to='/'>
-        <h1>e-commerce</h1>
+      <i class='bx bx-cart-alt'></i><h1>e-commerce</h1>
       </NavLink>
       <ul className='header-navbar'>
           <li className='header-link'><NavLink to='/login'><i className='bx bx-user'></i></NavLink></li>
