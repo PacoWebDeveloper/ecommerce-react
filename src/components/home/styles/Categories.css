@@ -25,6 +25,7 @@
     cursor: pointer;
     transition: background-color 500ms ease;
 }
-.categoriesFilter-list li:hover {
+.categoriesFilter-list li:hover,
+.categoriesFilter-list li:active {
     background-color: #ccc;
 }

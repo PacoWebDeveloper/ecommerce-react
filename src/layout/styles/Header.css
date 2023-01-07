@@ -41,12 +41,19 @@
     border-left: 1px solid var(--color-gray);
     transition: background-color 500ms ease;
 }
-.header-link:hover {
+.header-link:hover,
+.header-link:active {
     background-color: #def;
 }
 @media (max-width: 600px) {
     .header-link {
         border-left: none;
+    }
+    .header-pageName {
+        font-size: 10px;
+    }
+    .bx-cart-alt {
+        font-size: 1.5rem;
     }
 }
 
