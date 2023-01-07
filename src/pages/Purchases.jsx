@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import { useState } from 'react'
 import axios from 'axios'
 import { getConfig } from '../utils/configAxios'
-import PurchaseCard from '../components/purchases/purchaseCard'
+import PurchaseCard from '../components/purchases/PurchaseCard'
 import './styles/Purchases.css'
 
 const Purchases = () => {
